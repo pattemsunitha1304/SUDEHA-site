@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Target, Eye, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import teamImage from "@/assets/team-collaboration.jpg";
+import digitalImage from "@/assets/digital-transform.jpg";
 
 const About = () => {
   return (
@@ -36,33 +38,42 @@ const About = () => {
 
       {/* Our Story */}
       <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <motion.h2 
-            className="text-4xl font-bold mb-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Our Story
-          </motion.h2>
-          <motion.div 
-            className="space-y-6 text-lg text-muted-foreground"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <p>
-              Founded with a vision to transform the digital landscape, SUDEHA GLOBAL has grown into a trusted partner for businesses seeking innovative IT solutions. Our journey began with a simple belief: technology should empower, not complicate.
-            </p>
-            <p>
-              Over the years, we've worked with diverse clients across industries, delivering custom web applications, mobile solutions, intelligent automation, and AI-powered systems. Each project strengthens our commitment to excellence and innovation.
-            </p>
-            <p>
-              Today, SUDEHA GLOBAL stands as a beacon of reliability and creativity in the IT industry. We don't just build software; we craft experiences that drive growth, efficiency, and success for our clients.
-            </p>
-          </motion.div>
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold mb-8">Our Story</h2>
+              <div className="space-y-6 text-lg text-muted-foreground">
+                <p>
+                  Founded with a vision to transform the digital landscape, SUDEHA GLOBAL has grown into a trusted partner for businesses seeking innovative IT solutions. Our journey began with a simple belief: technology should empower, not complicate.
+                </p>
+                <p>
+                  Over the years, we've worked with diverse clients across industries, delivering custom web applications, mobile solutions, intelligent automation, and AI-powered systems.
+                </p>
+                <p>
+                  Today, SUDEHA GLOBAL stands as a beacon of reliability and creativity in the IT industry.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl rounded-full"></div>
+              <img 
+                src={teamImage} 
+                alt="Team Collaboration" 
+                className="relative rounded-2xl shadow-2xl w-full h-auto border border-primary/20"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -112,7 +112,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Call Us</h3>
                 <p className="text-muted-foreground">+91 9032935377</p>
-                <p className="text-muted-foreground">+91 89639111619</p>
+                <p className="text-muted-foreground">+91 8639111619</p>
               </Card>
             </motion.div>
 
